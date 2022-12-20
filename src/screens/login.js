@@ -5,6 +5,8 @@ import axios from 'axios'
 import  LinearGradient  from 'react-native-linear-gradient';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useSelector,useDispatch } from 'react-redux';
+import { KeyboardAvoidingScrollView } from "react-native-keyboard-avoiding-scroll-view";
+
 const HomeScreen=({navigation})=> {
   const dispatch =  useDispatch();
 
@@ -75,6 +77,7 @@ const HomeScreen=({navigation})=> {
     </View>
     :
     <View  style={{ flex: 1,paddingTop:100,backgroundColor:'#1D1C24' }}>
+    <KeyboardAvoidingScrollView>
      <View style={{alignItems:'center',justifyContent:'center'}}>
         <Image source={require('../assets/follow.png')} style={{width:200,height:200}} />
       </View>
@@ -97,6 +100,7 @@ const HomeScreen=({navigation})=> {
             <Text style={{fontWeight:'bold',fontSize:16,color:'white'}}>Start using App</Text>}
         </TouchableOpacity>
       </LinearGradient>
+      </KeyboardAvoidingScrollView>
       </View>
 
     );

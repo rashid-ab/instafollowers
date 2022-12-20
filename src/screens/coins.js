@@ -39,7 +39,7 @@ const Coins= ()=> {
       // async ()=>{
         console.log('RNIap','products')
       //  RNIap.prepare();
-      const products =  RNIap.getProducts(['com.instaboost.firstproduct']);
+      const products =  RNIap.getProducts(['firstproduct']);
       console.log('RNIap',products)
     // }
         data();

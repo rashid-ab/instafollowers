@@ -6146,6 +6146,11 @@
   "resolved" "https://registry.npmjs.org/react-native-iap/-/react-native-iap-12.4.4.tgz"
   "version" "12.4.4"
 
+"react-native-keyboard-avoiding-scroll-view@^1.0.1":
+  "integrity" "sha512-l+CYCbQ7fueM4kat28zSdi7r1ABxRBHikVCTmjGQLIvJBABxS7qgi3Y9ozU8CpqD6wEeqPb02AnBS+jiAYXBvA=="
+  "resolved" "https://registry.npmjs.org/react-native-keyboard-avoiding-scroll-view/-/react-native-keyboard-avoiding-scroll-view-1.0.1.tgz"
+  "version" "1.0.1"
+
 "react-native-linear-gradient@^2.6.2":
   "integrity" "sha512-Z8Xxvupsex+9BBFoSYS87bilNPWcRfRsGC0cpJk72Nxb5p2nEkGSBv73xZbEHnW2mUFvP+huYxrVvjZkr/gRjQ=="
   "resolved" "https://registry.npmjs.org/react-native-linear-gradient/-/react-native-linear-gradient-2.6.2.tgz"

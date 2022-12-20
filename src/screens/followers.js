@@ -79,6 +79,7 @@ const Followers= ({navigation})=> {
         'type':types.toLowerCase()+'s',
         'image':pic_url,
         'status':'true',
+        'quantity':types=='follower'?value:types=='views'?value2:types=='likes'?value2:value2,
         'coins':types=='follower'?states.likes.followers*value:types=='views'?states.likes.views*value2:types=='likes'?states.likes.likes*value2:states.likes.comments*value2
       })
       .then(function (response) {
@@ -123,7 +124,7 @@ const previousPost = (imageurl,linkurl) =>{
       </View>
       <View style={{paddingHorizontal:20,paddingVertical:15}}>
         <Text style={{color:'white',fontSize:16}}>Select number of followers that you want to recieve.</Text>
-        <Text style={{color:'white',fontSize:16,alignSelf:'center'}}>20 Coins = 1 Follower</Text>
+        <Text style={{color:'white',fontSize:16,alignSelf:'center'}}>{states.likes.followers} Coins = 1 Follower</Text>
       </View>
       <View style={{height:100,marginHorizontal:20}}>
           <Slider

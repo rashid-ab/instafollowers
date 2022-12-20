@@ -60,6 +60,47 @@ const Likes= ()=> {
   const getFollowers = (types)=>{
     setLoader(true)
     
+    // if(types=='views'){
+    //   if(value2==0){
+    //     setLoader(false)
+    //     return alert('Please Select a Value!');
+    //   }
+    //   if(parseInt(states.coins) < states.likes.views*value2){
+    //     setLoader(false)
+    //     return alert('You have Less Coins!');
+    //   }
+    // }
+    // if(types=='likes'){
+    //   if(value2==0){
+    //     setLoader(false)
+    //     return alert('Please Select a Value!');
+    //   }
+    //   if(parseInt(states.coins) < states.likes.likes*value2){
+    //     setLoader(false)
+    //     return alert('You have Less Coins!');
+    //   }
+    // }
+    // if(types=='comments'){
+    //   if(value2==0){
+    //     setLoader(false)
+    //     return alert('Please Select a Value!');
+    //   }
+    //   if(parseInt(states.coins) < states.likes.comments*value2){
+    //     setLoader(false)
+    //     return alert('You have Less Coins!');
+    //   }
+    // }
+
+    if(types=='follower'){
+      if(value==0){
+        setLoader(false)
+        return alert('Please Select a Value!');
+      }
+      if(parseInt(states.coins) < states.likes.followers*value){
+        setLoader(false)
+        return alert('You have Less Coins!');
+      }
+    }
     if(types=='views'){
       if(value2==0){
         setLoader(false)
@@ -98,6 +139,7 @@ const Likes= ()=> {
         'type':types.toLowerCase()+'s',
         'image':pic_url,
         'status':'true',
+        'quantity':types=='follower'?value:types=='views'?value2:types=='likes'?value2:value2,
         'coins':types=='followers'?states.likes.followers*value:types=='views'?states.likes.views*value2:types=='likes'?states.likes.likes*value2:states.likes.comments*value2
       })
       .then(function (response) {
