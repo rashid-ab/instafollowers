@@ -90,7 +90,6 @@ const Likes= ()=> {
     //     return alert('You have Less Coins!');
     //   }
     // }
-
     if(types=='follower'){
       if(value==0){
         setLoader(false)
@@ -122,6 +121,7 @@ const Likes= ()=> {
       }
     }
     if(types=='comments'){
+      
       if(value2==0){
         setLoader(false)
         return alert('Please Select a Value!');
@@ -214,7 +214,7 @@ const previousPost = (imageurl,linkurl) =>{
       <TouchableOpacity onPress={()=>setType('likes')} style={{marginHorizontal:10,width:'28%',marginTop:20,backgroundColor:'#8959D3',paddingVertical:10,borderRadius:10,borderColor:'#8959D3',borderWidth:1,alignItems:'center'}}>
           <Text style={{color:'white',fontSize:16}}>Like</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={()=>setType('commnets')} style={{marginHorizontal:10,width:'28%',marginTop:20,paddingVertical:10,backgroundColor:'#8959D3',borderRadius:10,borderColor:'#8959D3',borderWidth:1,alignItems:'center'}}>
+      <TouchableOpacity onPress={()=>setType('comments')} style={{marginHorizontal:10,width:'28%',marginTop:20,paddingVertical:10,backgroundColor:'#8959D3',borderRadius:10,borderColor:'#8959D3',borderWidth:1,alignItems:'center'}}>
           <Text style={{color:'white',fontSize:16}}>Comments</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={()=>setType('views')} style={{marginHorizontal:10,width:'28%',marginTop:20,paddingVertical:10,backgroundColor:'#8959D3',borderRadius:10,borderColor:'#8959D3',borderWidth:1,alignItems:'center'}}>
